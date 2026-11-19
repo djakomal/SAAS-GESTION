@@ -69,10 +69,10 @@ export default function ProductForm({
   }
 
   return (
-    <form id={formId} onSubmit={submit} className="space-y-5">
+    <form id={formId} onSubmit={submit} className="space-y-4">
       {/* Identification */}
       <section>
-        <h3 className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-3 flex items-center gap-2">
+        <h3 className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2 flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[10px] flex items-center justify-center">1</span>
           Identification
         </h3>
@@ -133,7 +133,7 @@ export default function ProductForm({
 
       {/* Prix */}
       <section>
-        <h3 className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-3 flex items-center gap-2">
+        <h3 className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2 flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[10px] flex items-center justify-center">2</span>
           Prix & marge
         </h3>
@@ -163,7 +163,7 @@ export default function ProductForm({
 
       {/* Stock */}
       <section>
-        <h3 className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-3 flex items-center gap-2">
+        <h3 className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2 flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[10px] flex items-center justify-center">3</span>
           Stock
         </h3>
