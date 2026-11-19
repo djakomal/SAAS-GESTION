@@ -108,6 +108,7 @@ Identifiants pré-remplis sur la page de connexion. Complétez le nom de la bout
 | `npm run build` | Compile backend et frontend |
 | `npm run db:setup` | Prisma generate + migrations + seed |
 | `npm run db:reset` | Réinitialise la base et recharge le seed |
+| `powershell -File scripts\start.ps1` | Lance tout (PostgreSQL + API + interface) en arrière-plan, même après un redémarrage |
 | `powershell -File scripts\pg.ps1 -Action start\|stop\|status` | PostgreSQL portable |
 
 ## Configuration
