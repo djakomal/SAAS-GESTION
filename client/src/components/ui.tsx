@@ -75,10 +75,10 @@ export function Modal({
   if (!open) return null
   const sizes = { sm: 'max-w-md', md: 'max-w-xl', lg: 'max-w-3xl', xl: 'max-w-5xl' }
   return (
-    <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto" role="dialog" aria-modal="true">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
       <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm" onClick={onClose} />
-      <div className={`relative w-full ${sizes[size]} my-auto bg-white rounded-2xl shadow-2xl animate-in`}>
-        <div className="flex items-start justify-between gap-4 px-6 py-5 border-b border-slate-100">
+      <div className={`relative flex flex-col w-full ${sizes[size]} max-h-[calc(100vh-1.5rem)] sm:max-h-[calc(100vh-3rem)] bg-white rounded-2xl shadow-2xl animate-in overflow-hidden`}>
+        <div className="shrink-0 flex items-start justify-between gap-4 px-6 py-4 border-b border-slate-100">
           <div>
             <h2 className="text-lg font-bold text-slate-900">{title}</h2>
             {description && <p className="text-sm text-slate-500 mt-0.5">{description}</p>}
@@ -87,8 +87,8 @@ export function Modal({
             <X size={20} />
           </button>
         </div>
-        <div className="px-6 py-5 max-h-[calc(100vh-220px)] overflow-y-auto">{children}</div>
-        {footer && <div className="flex justify-end gap-2 px-6 py-4 bg-slate-50/80 border-t border-slate-100 rounded-b-2xl">{footer}</div>}
+        <div className="flex-1 min-h-0 overflow-y-auto px-6 py-5">{children}</div>
+        {footer && <div className="shrink-0 flex justify-end gap-2 px-6 py-4 bg-slate-50/80 border-t border-slate-100">{footer}</div>}
       </div>
     </div>
   )
