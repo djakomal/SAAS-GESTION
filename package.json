@@ -1,0 +1,24 @@
+{
+  "name": "stockflow-saas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SaaS de gestion de stock et de facturation pour commerces locaux",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"npm:dev -w server\" \"npm:dev -w client\"",
+    "build": "npm run build -w server && npm run build -w client",
+    "start": "npm run start -w server",
+    "db:setup": "npm run prisma:generate -w server && npm run prisma:migrate -w server && npm run prisma:seed -w server",
+    "db:reset": "npm run prisma:reset -w server",
+    "setup": "npm install && npm run db:setup"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
